@@ -1,23 +1,68 @@
+const auth = firebase.auth();
 const rdb = firebase.database();
 
-function kirimPesan() {
+function registerBtn() {
 
-    var nama = document.getElementById('nama');
-    var email = document.getElementById('email');
-    var pesan = document.getElementById('pesan');
+    var email = document.getElementById('register-email');
+    var password = document.getElementById('register-password');
+    var name = document.getElementById('register-name');
+    var bio = document.getElementById('register-bio');
 
-    var gabungan = {
-        "Nama": nama.value,
+
+    var data = {
+        "Nama": name.value,
+        "Bio": bio.value,
         "Email": email.value,
-        "Pesan": pesan.value
+        "Password": password.value
     }
 
-    rdb.ref('Pesan').push().set(gabungan);
+    if (email.value == '' || password.value == '' || name.value == '' || bio.value == '') {
+        alert('Harap isi semua bidang')
+    } else {
+        auth.createUserWithEmailAndPassword(email.value, password.value)
+            .then(cred => {
+                rdb.ref('users').child(cred.user.uid).set(data);
+                alert("Berhasil Membuat Akun");
+            })
+            .catch(error => {
+                alert(error.message);
+            })
+    }
+}
 
-    nama.value = '';
-    email.value = '';
-    pesan.value = '';
+auth.onAuthStateChanged(user => {
+    if (user) {
+        var nama = document.getElementById('profil-nama');
+        var bio = document.getElementById('profil-bio');
+        var email = document.getElementById('profil-email');
 
+        rdb.ref('users').child(auth.currentUser.uid).on('value', data => {
+            nama.innerHTML = data.val().Nama;
+            email.innerHTML = data.val().Email;
+            bio.innerHTML = data.val().Bio;
+        })
 
-    alert('Pesan Terkirim');
+        document.getElementById('auth').style.display = 'none';
+        document.getElementById('profil').style.display = 'block';
+    }
+})
+
+function loginBtn() {
+    var email = document.getElementById('login-email');
+    var password = document.getElementById('login-password');
+
+    if (email.value == '' || password.value == '') {
+        alert('Harap isi semua bidang!')
+    } else {
+        auth.signInWithEmailAndPassword(email.value, password.value)
+            .catch(error => {
+                alert(error.message);
+            })
+    }
+}
+
+function logout() {
+    auth.signOut();
+    alert('Berhasil keluar dari akun kamu');
+    window.location.reload()
 }

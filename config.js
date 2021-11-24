@@ -1,5 +1,3 @@
-// REPLACE DENGAN CONFIG PROJECT KALIAN
-
 const firebaseConfig = {
     apiKey: "GANTI_DENGAN_PUNYA_KALIAN",
     authDomain: "GANTI_DENGAN_PUNYA_KALIAN",
