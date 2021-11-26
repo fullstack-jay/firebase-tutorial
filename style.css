@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Dosis';
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth {
+    width: 90%;
+    max-width: 300px;
+    border: 2px solid cyan;
+    padding: 10px;
+    box-shadow: 0 0 5px cyan;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #0a0a0a;
+}
+
+.bar {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#bar-login {
+    background-color: cyan;
+    color: black;
+}
+
+.menu {
+    text-align: center;
+    width: 100%;
+    background: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid cyan;
+}
+
+.active {
+    text-align: center;
+    width: 100%;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid white;
+}
+
+.error {
+    color: red;
+    text-shadow: 0 0 5px red;
+}
+
+input {
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    background-color: #1b1b1b;
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+    font-family: 'Dosis';
+    text-align: center;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    background-color: #1b1b1b;
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+    font-family: 'Dosis';
+    text-align: center;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-bottom: 2px solid cyan;
+    color: cyan;
+}
+
+button {
+    width: 100px;
+    font-family: 'Dosis';
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    border: none;
+    background-color: #0073d1;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+button:active {
+    background-color: #004a86;
+}
+
+.profil {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    padding: 7px 0 5px 0;
+}
+
+.profil-title {
+    font-size: 30px;
+    border-bottom: 2px solid cyan;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+}
+
+.prfl {
+    margin-bottom: 10px;
+}
+
+.prof-ket {
+    color: #ccc;
+}
+
+.profil-bg {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.profil-foto {
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
+
+/* .auth {
+    display: none;
+} */
+
+.profil,
+.form-register,
+.form-forgot {
+    display: none;
+}
