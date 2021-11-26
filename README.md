@@ -6,3 +6,6 @@
 
 > **Episode 2:** Login, Register, & Menampilkan User dengan Firebase Authentication <br/>
 **[Buka Episode 2](https://github.com/devanka761/firebase-tutorial/tree/episode-2)**
+
+> **Episode 3:** Mengatur & Menampilkan Foto Profil Default User<br/>
+**[Buka Episode 3](https://github.com/devanka761/firebase-tutorial/tree/episode-3)**
