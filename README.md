@@ -9,3 +9,6 @@
 
 > **Episode 3:** Mengatur & Menampilkan Foto Profil Default User<br/>
 **[Buka Episode 3](https://github.com/devanka761/firebase-tutorial/tree/episode-3)**
+
+> **Episode 4 & 5:** Mengubah Username & Foto Profil User<br/>
+**[Buka Episode 4 & 5](https://github.com/devanka761/firebase-tutorial/tree/episode-4-d-5)**
