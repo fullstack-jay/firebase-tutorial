@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="auth" id="auth">
+        <div class="bar">
+            <div id="bar-login" onclick="loginBar()" class="menu bar-login">Masuk</div>
+            <div id="bar-register" onclick="registerBar()" class="menu bar-register">Buat Akun</div>
+            <div id="bar-forgot" onclick="forgotBar()" class="menu bar-forgot">Lupa Sandi</div>
+        </div>
+        <div class="form-login">
+            <div class="error login-err" id="login-err"></div>
+            <input type="text" id="login-email" placeholder="Masukkan Email" />
+            <input type="password" id="login-password" placeholder="Masukkan Password" />
+            <button type="button" id="btn-login" onclick="loginBtn();">Masuk</button>
+        </div>
+        <div class="form-register">
+            <div class="error register-err" id="register-err"></div>
+            <input type="text" id="register-name" placeholder="Masukkan Username" />
+            <textarea maxlength="50" id="register-bio" placeholder="Masukkan bio (max. 50 karakter)"></textarea>
+            <input type="text" id="register-email" placeholder="Masukkan Email" />
+            <input type="password" id="register-password" placeholder="Password" />
+            <button type="button" id="btn-register" onclick="registerBtn();">Daftar</button>
+        </div>
+        <div class="form-forgot">
+            <input type="email" id="forgot-email" placeholder="Masukkan Email" />
+            <button type="button" id="btn-forgot" onclick="forgotBtn();">Reset Sandi</button>
+        </div>
+    </div>
+    <div class="profil" id="profil">
+        <div class="profil-title">Akun Kamu</div>
+        <div class="profil-bg" id="profil-bg">
+            <div class="profil-foto" id="profil-foto" onclick="gantiFoto();"></div>
+            <input type="file" accept="image/*" id="cari-foto" style="display: none;" />
+        </div>
+        <div class="prof-ket">Nama:</div>
+        <div class="prfl profil-nama" id="profil-nama">Loading</div>
+        <input class="input-nama" id="input-nama" placeholder="Tulis Nama Baru Kamu" style="display: none;" />
+        <button type="button" class="submit-nama" id="submit-nama" onclick="submitNama(this);"
+            style="display: none;">Submit
+            Nama</button>
+        <div class="prof-ket">Bio:</div>
+        <div class="prfl profil-bio" id="profil-bio">Loading</div>
+        <textarea class="input-bio" id="input-bio" placeholder="Tulis Bio Baru Kamu" maxlength="50"
+            style="display: none;"></textarea>
+        <button type="button" class="submit-bio" id="submit-bio" onclick="submitBio(this);"
+            style="display: none;">Submit
+            Bio</button>
+        <div class="prof-ket">Email:</div>
+        <div class="prfl profil-email" id="profil-email">Loading</div>
+        <button type="button" id="logout" style="background-color: #e9b0b0;" onclick="logout();">Keluar Akun</button>
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-storage.js"></script>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="tombol.js"></script>
+
+</html>

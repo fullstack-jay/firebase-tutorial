@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+body {
+    background-color: #dfe4e9;
+    color: #1b1b1b;
+    font-family: 'Dosis';
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth {
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background: #dfe4e9;
+    box-shadow: 13px 13px 20px #cbced1,
+        -13px -13px 20px white;
+}
+
+.bar {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#bar-login {
+    color: black;
+    background-color: #c5c5c5;
+}
+
+.menu {
+    text-align: center;
+    width: 100%;
+    background: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #1b1b1b;
+}
+
+.active {
+    text-align: center;
+    width: 100%;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid white;
+}
+
+.error {
+    color: red;
+    text-shadow: 0 0 5px red;
+}
+
+input {
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    color: #1b1b1b;
+    font-family: 'Dosis';
+    text-align: center;
+    border-radius: 5px;
+    background: none;
+    box-shadow: inset 8px 8px 8px #cbced1,
+        inset -8px -8px 8px #ffffff;
+}
+
+textarea {
+    width: 200px;
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    color: #1b1b1b;
+    font-family: 'Dosis';
+    text-align: center;
+    border-radius: 5px;
+    background: none;
+    box-shadow: inset 8px 8px 8px #cbced1,
+        inset -8px -8px 8px #ffffff;
+}
+
+button {
+    width: 100px;
+    font-family: 'Dosis';
+    padding: 5px 3px 5px 3px;
+    margin: 5px;
+    border: none;
+    color: #1b1b1b;
+    cursor: pointer;
+    font-weight: 700;
+    background: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #a1a1a1,
+        -3px -3px 8px white;
+}
+
+button:active {
+    box-shadow: inset 8px 8px 8px #a1a1a1,
+        inset -8px -8px 8px #ffffff;
+}
+
+#btn-login {
+    background-color: #b0cce9;
+}
+
+#btn-register {
+    background-color: #b7e9b0;
+}
+
+#btn-forgot {
+    background-color: #e9b0b0;
+}
+
+.profil {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 7px 0 5px 0;
+    box-shadow: 13px 13px 20px #cbced1,
+        -13px -13px 20px white;
+}
+
+.profil-title {
+    font-size: 30px;
+    border-bottom: 2px dashed #1b1b1b;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+}
+
+.prfl {
+    margin-bottom: 10px;
+}
+
+.prof-ket {
+    color: #777;
+}
+
+.profil-bg {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.profil-foto {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    box-shadow: 3px 3px 5px #555,
+        -3px -3px 5px white;
+}
+
+/* .auth {
+    display: none;
+} */
+
+.profil,
+.form-register,
+.form-forgot {
+    display: none;
+}
